@@ -1,0 +1,80 @@
+{% extends 'myapp/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<main id="main">
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2 style="font-family: Garamond;">Contact</h2>
+          <p style="font-family: Garamond; font-size: 20px;">Interested in Tech services? Kindly fill the form the form below and I will be in touch with you. Always a pleasure hearing from.</p>
+        </div>
+
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4 style="font-family: Garamond;">Location:</h4>
+                <p style="font-family: Garamond; font-size: 16px;">Nairobi, Kenya</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4 style="font-family: Garamond;">Email:</h4>
+                <p style="font-family: Garamond; font-size: 16px;">amoskoileken254@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4 style="font-family: Garamond;">Call:</h4>
+                <p style="font-family: Garamond; font-size: 16px;">(+254) 740 872 215</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+          <div class="d-flex justify-content-center">
+            {% if messages %}
+              {% for message in messages  %}
+                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert" style="display: flex; width: auto;">
+                  {{ message }}
+
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>  
+              {% endfor %}
+            {% endif %}
+            </div>
+            <form method="POST" role="form">
+            {% csrf_token %}
+                    
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  {{ form.name|as_crispy_field }}
+                </div>
+                <div class="col-md-6 form-group">
+                  {{ form.from_email|as_crispy_field }}
+                </div>
+              </div> 
+              {{ form.subject|as_crispy_field }} 
+              
+              {{ form.message|as_crispy_field }}
+            
+              <div class="text-center"><button class="btn btn-outline-primary btn-block" type="submit">Send Message</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+{% endblock content %}
+

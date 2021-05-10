@@ -1,0 +1,43 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block content %}
+<main id="main">
+
+    {% comment %} About Section  {% endcomment %}
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2 style="font-family: Garamond;">Profile</h2>
+          <p style="font-family: Garamond; font-size: 18px;">Result-oriented Software Engineer adept in bringing forth expertise in design, development, testing and maintenance of software systems. Proficient in various platforms and languages. 
+                    Able to effectively self-manage during independent projects, as well as collaborate as part of a productive team.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <img src="{% static 'myapp/assets/img/profile.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content">
+            <h3 style="font-family: Garamond;">Software Engineer</h3>
+          
+            <div class="row">
+              <div class="col-lg-12">
+                <ul>
+                  <hr><li style="font-family: Garamond; font-size: 19px;"><i class="bi bi-rounded-right"></i> <strong>Phone:</strong> (+254) 740 872 215</li>
+                  <hr><li style="font-family: Garamond; font-size: 19px;"><i class="bi bi-rounded-right"></i> <strong>City:</strong>  Nairobi, Kenya</li>
+               
+                 <hr> <li style="font-family: Garamond; font-size: 19px;"><i class="bi bi-rounded-right"></i> <strong>Degree:</strong> Bsc in Informatics and Computer Science</li>
+                  <hr> <li style="font-family: Garamond; font-size: 19px;"><i class="bi bi-rounded-right"></i> <strong>Email:</strong> amoskoileken254@gmail.com</li><hr>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+{% endblock content %}
+
