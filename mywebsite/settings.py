@@ -14,9 +14,9 @@ from pathlib import Path
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-# BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -127,17 +127,17 @@ STATIC_URL = '/static/'
 
 # STATICFILES_DIRS =[
 #     os.path.join(BASE_DIR, 'static'),
-#     # os.path.join(BASE_DIR, 'static/myapp/assets/css'),
-#     # os.path.join(BASE_DIR, 'static/myapp/assets/img'),
-#     # os.path.join(BASE_DIR, 'static/myapp/assets/js'),
-#     # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/aos'),
-#     # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/bootstrap'),
-#     # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/bootstrap-icons'),
-#     # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/boxicons'),
-#     # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/glightbox'),
-#     # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/isotope-layout'),
-#     # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/swiper'),
-#     # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/waypoints')
+#     os.path.join(BASE_DIR, 'static/myapp/assets/css'),
+#     os.path.join(BASE_DIR, 'static/myapp/assets/img'),
+#     os.path.join(BASE_DIR, 'static/myapp/assets/js'),
+#     os.path.join(BASE_DIR, 'static/myapp/assets/vendor/aos'),
+#     os.path.join(BASE_DIR, 'static/myapp/assets/vendor/bootstrap'),
+#     os.path.join(BASE_DIR, 'static/myapp/assets/vendor/bootstrap-icons'),
+#     os.path.join(BASE_DIR, 'static/myapp/assets/vendor/boxicons'),
+#     os.path.join(BASE_DIR, 'static/myapp/assets/vendor/glightbox'),
+#     os.path.join(BASE_DIR, 'static/myapp/assets/vendor/isotope-layout'),
+#     os.path.join(BASE_DIR, 'static/myapp/assets/vendor/swiper'),
+#     os.path.join(BASE_DIR, 'static/myapp/assets/vendor/waypoints')
 # ]
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
