@@ -51,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'mywebsite.urls'
@@ -125,20 +126,20 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS =[
-    os.path.join(BASE_DIR, 'static'),
-    # os.path.join(BASE_DIR, 'static/myapp/assets/css'),
-    # os.path.join(BASE_DIR, 'static/myapp/assets/img'),
-    # os.path.join(BASE_DIR, 'static/myapp/assets/js'),
-    # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/aos'),
-    # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/bootstrap'),
-    # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/bootstrap-icons'),
-    # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/boxicons'),
-    # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/glightbox'),
-    # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/isotope-layout'),
-    # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/swiper'),
-    # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/waypoints')
-]
+# STATICFILES_DIRS =[
+#     os.path.join(BASE_DIR, 'static'),
+#     # os.path.join(BASE_DIR, 'static/myapp/assets/css'),
+#     # os.path.join(BASE_DIR, 'static/myapp/assets/img'),
+#     # os.path.join(BASE_DIR, 'static/myapp/assets/js'),
+#     # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/aos'),
+#     # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/bootstrap'),
+#     # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/bootstrap-icons'),
+#     # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/boxicons'),
+#     # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/glightbox'),
+#     # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/isotope-layout'),
+#     # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/swiper'),
+#     # os.path.join(BASE_DIR, 'static/myapp/assets/vendor/waypoints')
+# ]
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
@@ -157,3 +158,5 @@ EMAIL_HOST_USER = 'sintiyoamos@gmail.com'
 EMAIL_HOST_PASSWORD = 'ecosuduinmgufwhe'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
