@@ -11,13 +11,13 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-from dotenv import load_dotenv
 import os
 import django_heroku
 
-load_dotenv()
-env_path = Path('.')/'.env'
-load_dotenv(dotenv_path=env_path)
+import environ
+
+env = environ.Env()
+environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = env('SECRET_KEY')
 # sec key = '2ec2cca931605c06eabb9402ab6b9a8ee1d6e487809bb4eb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -159,9 +159,9 @@ EMAIL_PORT = 587
 
 EMAIL_USE_TLS = True
 
-EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
 
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
