@@ -11,23 +11,22 @@
   <meta content="" name="keywords">
 
   {% comment %} < Favicons {% endcomment %}
-  <link href="{% static 'myapp/assets/img/icon.png' %} " rel="icon">
-  <link href="{% static 'myapp/assets/img/icon.png' %} " rel="apple-touch-icon">
+  <link href="{% static 'myapp/icon.png' %} " rel="icon">
+  <link href="{% static 'myapp/icon.png' %} " rel="apple-touch-icon">
 
   {% comment %} Google Fonts {% endcomment %}
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  {% comment %}  Vendor CSS Files  {% endcomment %}
-  <link href="{% static 'myapp/assets/vendor/aos/aos.css' %} " rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">  {% comment %}  Vendor CSS Files  {% endcomment %}
+  <link href="{% static 'myapp/aos.css' %} " rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <link href="{% static 'myapp/assets/vendor/bootstrap-icons/bootstrap-icons.css' %} " rel="stylesheet">
-  <link href="{% static 'myapp/assets/vendor/boxicons/css/boxicons.min.css' %} " rel="stylesheet">
-  <link href="{% static 'myapp/assets/vendor/glightbox/css/glightbox.min.css' %} " rel="stylesheet">
-  <link href="{% static 'myapp/assets/vendor/swiper/swiper-bundle.min.css' %} " rel="stylesheet">
+  <link href="{% static 'myapp/bootstrap-icons.css' %} " rel="stylesheet">
+  <link href="{% static 'myapp/boxicons.min.css' %} " rel="stylesheet">
+  <link href="{% static 'myapp/glightbox.min.css' %} " rel="stylesheet">
+  <link href="{% static 'myapp/swiper-bundle.min.css' %} " rel="stylesheet">
 
   {% comment %} Main Template CSS {% endcomment %}
-  <link href="{% static 'myapp/assets/css/style.css' %} " rel="stylesheet">
+  <link href="{% static 'myapp/style.css' %} " rel="stylesheet">
 
 </head>
 
@@ -39,7 +38,7 @@
 {% comment %} 
       <h1 class="logo me-auto me-lg-0"><a href="{% url 'homepage' %}">Amos-SK</a></h1> {% endcomment %}
       <!-- Uncomment below if you prefer to use an image logo --> 
-      <a href="{% url 'homepage' %}" class="logo"><img src="{% static 'myapp/assets/img/icon.png' %} " alt="" style="height: 125px; width: 75px; margin-left: 20px;" ></a>
+      <a href="{% url 'homepage' %}" class="logo"><img src="{% static 'myapp/icon.png' %} " alt="" style="height: 125px; width: 75px; margin-left: 20px;" ></a>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -55,8 +54,12 @@
 
       {% comment %} Links {% endcomment %}
       <div class="header-social-links">
-        <a href="https://github.com/Amos-KGS/" class="github"><i class="bi bi-github"></i></a>
-        <a href="http://www.linkedin.com/in/amos-koileken" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        <a href="https://github.com/Amos-KGS/" class="github"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+</svg></i></a>
+        <a href="http://www.linkedin.com/in/amos-koileken" class="linkedin"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+</svg></i></i></a>
       </div>
 
     </div>
@@ -83,15 +86,15 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   {% comment %}  Vendor JS Files {% endcomment %}
-  <script src="{% static 'myapp/assets/vendor/aos/aos.js' %} "></script>
+  <script src="{% static 'myapp/aos.js' %} "></script>
  
-  <script src="{% static 'myapp/assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
-  <script src="{% static 'myapp/assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
-  <script src="{% static 'myapp/assets/vendor/purecounter/purecounter.js' %}"></script>
-  <script src="{% static 'myapp/assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
-  <script src="{% static 'myapp/assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'myapp/glightbox.min.js' %}"></script>
+  <script src="{% static 'myapp/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'myapp/purecounter.js' %}"></script>
+  <script src="{% static 'myapp/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'myapp/noframework.waypoints.js' %}"></script>
   {% comment %} Main Template JS {% endcomment %}
-  <script src="{% static 'myapp/assets/js/main.js' %}"></script>
+  <script src="{% static 'myapp/main.js' %}"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
